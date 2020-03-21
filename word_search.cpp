@@ -5,7 +5,7 @@ const size_t BUFF_SIZE = 1024;
 
 FILE *file;
 char buff[BUFF_SIZE];
-int ptr, size;
+size_t ptr, size;
 
 int get_char() {
     if (ptr == size) {
@@ -18,7 +18,7 @@ int get_char() {
     }
 }
 
-int new_pi(size_t *pi, char *s, char symbol, size_t last_pi) {
+size_t new_pi(size_t *pi, char *s, char symbol, size_t last_pi) {
     size_t i = last_pi;
     while (i > 0 && symbol != s[i]) {
         i = pi[i - 1];
